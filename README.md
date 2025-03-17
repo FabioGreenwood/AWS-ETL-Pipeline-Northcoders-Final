@@ -1,4 +1,4 @@
-# AWS ETL Pipeline (Northcoders final project)
+# AWS ETL Pipeline (Northcoders Final Project)
 
 ## Overview
 
@@ -15,27 +15,25 @@ At the end of the project the system was populating, however areas of the group 
 
 ## Personal Contribution
 
-Personally I contributed to most areas of the code, however if you wish to see an example of my work I would look at these following files:
+Personally I contributed to many aspects of the code, however if you wish to see an example of my work, please look at these following files:
 - src/lambda_transform_utils.py 
 - src/lambda_load.py 
 - test/test_lambda_2_TDD.py
 
-These are files that Connor and I wrote using TDD and they create the "T" (transform) stage of the pipline. In this stage json data is taken from one s3 bucket, transformed according to the star schema requested and then saved as a parquet file ready of analysis. Hopefully in reading the file you can observe some of the following practices:
-- requirements being transferred into the testing file and being individually tested against
+These are files that Connor and I wrote using TDD and they create the "T" (transform) stage of the pipline. In this stage json data is taken from one s3 bucket, transformed according to the star schema requested and then saved as a parquet file ready for analysis. Hopefully in reading the file you can observe some of the following practices:
+- Requirements being transferred into the testing file and being individually tested against
 - Tests were written before their util functions were written
 - Fixtures being used
 - Moto3, a module that allows you to mock (simulate) a deployment to AWS
-- docstrings, for tests and functions
-- orderly code 
+- Docstrings, for tests and functions
+- Orderly code 
 
 Other actions I undertook in the project:
-- various refactors to terraform code to include new functionality
-- mentoring of other team members not from technical backgrounds
-- refactoring elements of the other python methods
-    - removing hardcodings
-    - ensuring that AWS secret manager with passing tokens into applications
-
-
+- Various refactors to terraform code to include new functionality
+- Mentoring of other team members not from technical backgrounds
+- Refactoring elements of the other python methods
+    - Removing hardcodings
+    - Ensuring that AWS secret manager with passing tokens into applications
 
 
 ## Contributors
