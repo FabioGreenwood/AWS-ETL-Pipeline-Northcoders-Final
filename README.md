@@ -8,8 +8,6 @@ The system is deployed in AWS using hashicorp terraform (infrastructure-as-code)
 
 ![ToteSys ETL Pipeline Diagram](totesys_etl_visual.gif)
 
-The ToteSys database is meant to simulate the back-end data of a commercial application, with data being inserted and updated into the database several times a day. The full ERD for the ToteSys database is detailed [here](https://dbdiagram.io/d/SampleDB-6332fecf7b3d2034ffcaaa92). 
-
 At the end of the project the system was populating, however areas of the group project, I feel, need refactoring.
 
 
@@ -20,20 +18,21 @@ Personally I contributed to many aspects of the code, however if you wish to see
 - src/lambda_load.py 
 - test/test_lambda_2_TDD.py
 
-These are files that Connor and I wrote using TDD and they create the "T" (transform) stage of the pipline. In this stage json data is taken from one s3 bucket, transformed according to the star schema requested and then saved as a parquet file ready for analysis. Hopefully in reading the file you can observe some of the following practices:
+These are files that Connor and I wrote using TDD and they create the "T" (transform) stage of the pipeline. In this stage json data is taken from one s3 bucket, transformed according to the star schema requested and then saved as a parquet file ready for analysis. Hopefully in reading the file you can observe some of the following practices:
 - Requirements being transferred into the testing file and being individually tested against
-- Tests were written before their util functions were written
+- Tests being written before their util functions were written
 - Fixtures being used
 - Moto3, a module that allows you to mock (simulate) a deployment to AWS
 - Docstrings, for tests and functions
-- Orderly code 
+- Orderly code (though I would admit the files I've highlighted aren't perfect)
 
 Other actions I undertook in the project:
-- Various refactors to terraform code to include new functionality
+- Various refactors to terraform code to include new functionality and the removal of hardcoding
+- Working within branches and merging changes
 - Mentoring of other team members not from technical backgrounds
 - Refactoring elements of the other python methods
     - Removing hardcodings
-    - Ensuring that AWS secret manager with passing tokens into applications
+    - Ensuring that AWS secret manager with passing tokens into applications 
 
 
 ## Contributors
