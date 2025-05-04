@@ -27,17 +27,17 @@ variable "default_tags" {
 
 variable "s3_ingestion_bucket" {
   type    = string
-  default = "totesys-ingestion-zone-fenor"
+  default = "totesys-ingestion-zone-fenor-fabio-greenwood"
 }
 
 variable "s3_processed_bucket" {
   type    = string
-  default = "totesys-processed-zone-fenor"
+  default = "totesys-processed-zone-fenor-fabio-greenwood"
 }
 
 variable "s3_logging_bucket" {
   type    = string
-  default = "totesys-data-logging-fenor"
+  default = "totesys-data-logging-fenor-fabio-greenwood"
 }
 
 # Function names

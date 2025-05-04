@@ -22,7 +22,7 @@ terraform {
 
   }
   backend "s3" {
-    bucket = "terraform-tfstate-totesys-project"
+    bucket = "terraform-tfstate-totesys-project-fabio-greenwood"
     key    = "terraform-tfstate-totesys/totesys_project.tfstate"
     region = "eu-west-2"
   }
