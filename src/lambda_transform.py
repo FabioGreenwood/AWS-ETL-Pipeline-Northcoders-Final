@@ -68,6 +68,7 @@ def lambda_handler(event, context):
         if memory ever becomes an issue this can be refactored to load/delete dataframes as needed (i.e. >> del df_totesys_design)
         discuss the implications of our testing backdoor
     """
+    
     try:
         #load_dotenv()
         # set up connection     
