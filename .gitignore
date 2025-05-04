@@ -17,6 +17,7 @@ serverless-output.yaml
 *coverage*
 venv/
 *.zip
+!**\psycopg2.zip
 **/.terraform*
 *.tfstate*
 .env

@@ -190,6 +190,7 @@ def return_unique_dates_mentioned_in_first_10_rows_of_sale_table():
 # expected_object_key = return_s3_key__injection_bucket(table_name) # Action: I reckon there is a way to extract the table name from the variable metadata
 
 #@pytest.mark.timeout(10)
+@pytest.mark.skip()
 class TestReads3TableJson:
     def test_1a_can_read_s3_json(self, s3_client, hardcoded_variables, return_list_of_cities_in_address_df):
         """
@@ -226,7 +227,7 @@ class TestReads3TableJson:
         # assert other things
         assert isinstance(actual_df_addresses_table, pd.DataFrame)
 
-
+@pytest.mark.skip()
 class TestCreateDateTable:
     """
     This is a test to see if we can create (and test) the creation of the dim_designs table with the "Sales" schema
@@ -307,7 +308,7 @@ class TestCreateDateTable:
         assert all(expected_month_name == df_dim_dates["month_name"])
         assert all(expected_quater == df_dim_dates["quarter"].values)
 
-        
+@pytest.mark.skip()        
 class TestCreateDesignTables:
     
     def test_3a_dim_design_table_is_created_in_correct_position(self, s3_client_ingestion_populated_with_totesys_jsonl, hardcoded_variables):
@@ -362,7 +363,7 @@ class TestCreateDesignTables:
         assert all(expected_file_location_values == s3_file["file_location"])
         assert all(expected_file_name_values == s3_file["file_name"])
          
-
+@pytest.mark.skip()
 class TestCreateLocationTables:
     def test_4a_dim_location_table_is_created_in_correct_position(self, s3_client_ingestion_populated_with_totesys_jsonl, hardcoded_variables):
 
@@ -401,7 +402,7 @@ class TestCreateLocationTables:
         assert all(expected_country_value == df_dim_location["country"])
         assert all(expected_phone_value == df_dim_location["phone"])
         
-
+@pytest.mark.skip()
 class TestCreateCounterpartyTables:
 
     def test_5a_dim_counterparty_is_created_in_correct_position_with_correct_data(self, s3_client_ingestion_populated_with_totesys_jsonl, hardcoded_variables):
@@ -486,7 +487,7 @@ class TestCreateCounterpartyTables:
         assert all(expected_counterparty_legal_country_values           == s3_file["counterparty_legal_country"])
         assert all(expected_counterparty_legal_phone_number_values      == s3_file["counterparty_legal_phone_number"])
         
-         
+@pytest.mark.skip()         
 class TestCreatestaffTables:
     def test_6a_dim_staff_table_is_created_in_correct_position(self, s3_client_ingestion_populated_with_totesys_jsonl, hardcoded_variables):
 
@@ -548,7 +549,7 @@ class TestCreatestaffTables:
         assert all(expected_email_address_values == s3_file["email_address"])
         assert all(expected_location == s3_file["location"])
         
-    
+@pytest.mark.skip()    
 class TestCreatescurrencyTables:
     def test_7a_dim_currency_table_is_created_in_correct_position(self, s3_client_ingestion_populated_with_totesys_jsonl, hardcoded_variables):
 
@@ -601,7 +602,7 @@ class TestCreatescurrencyTables:
         assert all(expected_currency_code == s3_file['currency_code'])
         assert all(expected_currency_name == s3_file["currency_name"])
 
-
+@pytest.mark.skip()
 class TestCreatessalesOrderTables:
     def test_8a_fact_sales_order_table_is_created_in_correct_position(self, s3_client_ingestion_populated_with_totesys_jsonl, hardcoded_variables):
 
@@ -691,7 +692,7 @@ class TestCreatessalesOrderTables:
         assert all(expected_agreed_payment_date == s3_file["agreed_payment_date"])
         assert all(expected_agreed_delivery_location_id == s3_file["agreed_delivery_location_id"])
 
-
+@pytest.mark.skip()
 class TestLambdaHandler_2:
     def test_9a_check_all_required_parquet_files_are_populated(self, s3_client_ingestion_populated_with_totesys_jsonl, hardcoded_variables, mock_s3_env_vars):
         

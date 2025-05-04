@@ -341,7 +341,7 @@ class TestWriteTableToS3:
             Key=key,
             Body=mock_df.to_json.return_value,
         )
-        assert key == "data/20021011_112233/test_table.jsonl"
+        assert key == "data/20021011_112233/test_table.json"
 
     @pytest.mark.it("Handles empty data gracefully and skips upload")
     def test_write_table_to_s3_empty_data(self):

@@ -102,7 +102,7 @@ def test_lambda_handler(
 
         result = lambda_handler(event, context)
     # ASSERT:
-    assert result == {"message": "Batch extraction job completed"}
+    assert result == {"message": "Batch extraction job completed", 'datetime_string': '20250723_000000', 'statusCode': 200}
     mock_create_conn.assert_called_once_with({"dbname": "test_db", "user": "test_user"})
     mock_get_rows_columns.assert_any_call(mock_conn, "address")
     mock_get_rows_columns.assert_any_call(mock_conn, "staff")

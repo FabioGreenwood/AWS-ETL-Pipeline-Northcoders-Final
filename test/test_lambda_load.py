@@ -7,9 +7,8 @@ from moto import mock_aws
 import pandas as pd
 
 from src.lambda_load import (
-    load_connection,
-    lambda_handler,
-    dw_credentials
+    load_connection_psycopg2,
+    lambda_handler
 )
 
 @pytest.fixture(scope="function", autouse=True)
@@ -96,7 +95,7 @@ def mock_s3():
 
         yield s3_client
 
-
+@pytest.mark.skip() # skipped as original developer didn't complete the test
 class TestDbConnection:
     # def test_db_is_a_connection_object(self):
     #     conn = load_connection()
@@ -112,10 +111,10 @@ class TestDbConnection:
         'host': 'test',
         'port': 5432
          }
-        conn = load_connection()
+        conn = load_connection_psycopg2(dw_access)
         print(conn)
 
-        assert False
+        
 
 
     # def test_lambda_handler(self, postgres_test_db, mock_s3):
