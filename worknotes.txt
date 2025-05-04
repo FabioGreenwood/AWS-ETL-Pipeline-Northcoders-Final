@@ -1,0 +1,9 @@
+This is a local file
+
+Ideas for the refactoring:
+
+the CICD pipeline
+
+get rid of that action
+ensure that thing works
+write the actions one must do when setting up the local env

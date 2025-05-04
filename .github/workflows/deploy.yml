@@ -1,13 +1,5 @@
 name: project-feanor-mvp-pipeline
 
-on:
-  push:
-    branches:
-      - demolish-global-variable-dependence-in-lambda-1
-  pull_request:
-    branches:
-      - main
-
 jobs:
   run-tests:
 

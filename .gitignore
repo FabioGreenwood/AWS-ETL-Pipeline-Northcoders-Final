@@ -21,3 +21,4 @@ venv/
 *.tfstate*
 .env
 venv.nosync
+local_worknotes*
