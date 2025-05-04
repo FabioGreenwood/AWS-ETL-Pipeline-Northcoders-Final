@@ -26,6 +26,7 @@ import logging
 from datetime import datetime
 from random import random, randint
 
+
 #from dotenv import load_dotenv
 #from src.utils import return_datetime_string
 #from src.lambda_transform_utils import read_s3_table_json, _return_df_dim_dates, _return_df_dim_design, _return_df_dim_location, populate_parquet_file, _return_df_dim_counterparty, _return_df_dim_staff, _return_df_dim_currency, _return_df_fact_sales_order, return_s3_key
@@ -67,6 +68,7 @@ def lambda_handler(event, context):
         if memory ever becomes an issue this can be refactored to load/delete dataframes as needed (i.e. >> del df_totesys_design)
         discuss the implications of our testing backdoor
     """
+    
     try:
         #load_dotenv()
         # set up connection     
