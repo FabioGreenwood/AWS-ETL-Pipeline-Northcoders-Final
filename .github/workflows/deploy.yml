@@ -1,5 +1,9 @@
 name: project-feanor-mvp-pipeline
 
+on:
+  pull_request:
+     branches:
+       - main
 
 jobs:
   run-tests:
