@@ -62,7 +62,6 @@ class DummyContext:
 
 MOCK_ENVIROMENT = True
 
-
 @pytest.fixture()
 def hardcoded_variables():
     hardcoded_variables = {}
@@ -205,6 +204,7 @@ class TestReads3TableJson:
         - read_s3_table_json(s3_client, s3_key)
             should:
             be able to see a pandas table with the rows and columns populated ready for use
+            
         """
         # assemble
         list_table_names = list(hardcoded_variables["dict_table_snapshot_filepaths"].keys())
