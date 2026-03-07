@@ -6,6 +6,8 @@ This project is a cloud ETL (Extract, Transform, Load) pipeline that automates d
 
 The system is deployed in AWS using hashicorp terraform (infrastructure-as-code), Python, SQL, database modelling, CICD, DevOps practices and Agile working
 
+This repo uses python 3.12
+
 ![ToteSys ETL Pipeline Diagram](totesys_etl_visual.gif)
 
 At the end of the project the system was populating, however areas of the group project, I feel, need refactoring.
